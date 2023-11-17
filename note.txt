@@ -1,11 +1,3 @@
-# O-Auth-Third-Party
-Login with Google, Facebook, Discord, Github,....
-
-Use supabase to login with Discord
-
-npm i
-npm start
-
 https://supabase.com/
 https://discord.com/developers
 
