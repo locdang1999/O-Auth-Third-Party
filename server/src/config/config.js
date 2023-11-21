@@ -6,7 +6,6 @@ const { PASSWORD_DB } = process.env;
 module.exports = {
   development: {
     username: "root",
-    // password: "Admin1234567@",
     password: PASSWORD_DB,
     database: "oauth_test",
     host: "127.0.0.1",
