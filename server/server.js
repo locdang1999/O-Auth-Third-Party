@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDB = require("./src/config/connectDB");
+const authRouter = require("./src/routers/authRouter");
+require('./passport');
 
 dotenv.config();
 const app = express();
@@ -15,9 +17,10 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/", (req, res) => {
-  return res.send('Hello World!');
-});
+// app.use("/", (req, res) => {
+//   return res.send("Hello World!");
+// });
+app.use("/api/auth", authRouter);
 
 connectDB();
 
