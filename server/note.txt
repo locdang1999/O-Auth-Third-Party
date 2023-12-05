@@ -1,3 +1,4 @@
+**** Server
 Doc:
 1. https://expressjs.com/en/5x/api.html#express
 2. https://www.passportjs.org/docs/
@@ -5,7 +6,7 @@ Doc:
 4. https://console.cloud.google.com/
 
 npm init -y
-npm i express passport cors nodemon dotenv
+npm i express passport cors nodemon dotenv jsonwebtoken
 npm install passport-google-oauth20
 
 npm install --save sequelize
@@ -16,3 +17,10 @@ npx sequelize-cli db:migrate => connect to DB craeate Table
 
 Issuse:
 https://stackoverflow.com/questions/38757728/using-an-enviroment-variable-for-local-sequelize-configuration
+
+*** Client
+
+npx create-react-app .    => Create directly with the folder created before 
+https://www.bootstrapcdn.com/
+npm i axios react-router-dom redux react-redux redux-persist
+npm i redux-thunk => Middleware
