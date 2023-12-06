@@ -1,9 +1,9 @@
 import { apiLoginSuccess } from "../../apis/authService";
 import actionTypes from "./actionTypes";
 
-export const loginSuccess = (id) => async (dispatch) => {
+export const loginSuccess = (id, tokenLogin) => async (dispatch) => {
   try {
-    let response = await apiLoginSuccess(id);
+    let response = await apiLoginSuccess(id, tokenLogin);
 
     if (response?.data.err === 0) {
       dispatch({
@@ -24,6 +24,6 @@ export const loginSuccess = (id) => async (dispatch) => {
   }
 };
 
-export const logout = () =>({
-    type: actionTypes.LOGOUT
-})
+export const logout = () => ({
+  type: actionTypes.LOGOUT,
+});

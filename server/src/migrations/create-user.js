@@ -20,6 +20,15 @@ module.exports = {
       typeLogin: {
         type: Sequelize.STRING,
       },
+      tokenLogin: {
+        type: Sequelize.STRING,
+      },
+      name: {
+        type: Sequelize.STRING,
+      },
+      avatarUrl: {
+        type: Sequelize.STRING,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

@@ -3,7 +3,13 @@ const router = require("express").Router();
 require("dotenv").config();
 const authController = require("../controllers/authController");
 
-router.get("/google", passport.authenticate("google", { scope: ["profile", "email"], session: false }));
+router.get(
+  "/google",
+  passport.authenticate("google", {
+    scope: ["profile", "email"],
+    session: false,
+  })
+);
 
 router.get(
   "/google/callback",
@@ -14,7 +20,9 @@ router.get(
     })(req, res, next);
   },
   (req, res) => {
-    res.redirect(`${process.env.URL_CLIENT}/login-success/${req.user?.id}`);
+    res.redirect(
+      `${process.env.URL_CLIENT}/login-success/${req.user?.id}/${req.user.tokenLogin}`
+    );
   }
 );
 
