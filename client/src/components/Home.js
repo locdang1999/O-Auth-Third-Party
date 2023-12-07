@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchUser = async () => {
       let response = await apiGetInfUser(token);
-      console.log(response)
+      
       if (response?.data.err === 0) {
         setUserInfo(response.data?.response);
       }

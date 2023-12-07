@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Login = () => {
-
-  const handleLogin = () =>{
-    window.open('http://localhost:5000/api/auth/google', '_self')
-  }
+  const handleLogin = (ro) => {
+    window.open(`http://localhost:5000/api/auth/${ro}`, "_self");
+  };
 
   return (
     <div
@@ -15,12 +14,17 @@ const Login = () => {
         marginTop: "32px",
       }}
     >
-      <button className="btn btn-primary" onClick={() => console.log("first")}>
+      <button
+        className="btn btn-primary"
+        onClick={() => handleLogin("facebook")}
+      >
         Facebook
       </button>
-      <button className="btn btn-danger" onClick={handleLogin}>Google</button>
+      <button className="btn btn-danger" onClick={() => handleLogin("google")}>
+        Google
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

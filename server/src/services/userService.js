@@ -3,15 +3,11 @@ const db = require("../models");
 const getInfoUser = (id) =>
   new Promise(async (resolve, reject) => {
     try {
-      let response = await db.User.findOne(
-        {
-          attributes: ["name", "email", "avatarUrl"],
-        },
-        {
-          where: { id },
-          raw: true,
-        }
-      );
+      let response = await db.User.findOne({
+        attributes: ["name", "email", "avatarUrl"],
+        where: { id },
+        raw: true,
+      });
 
       resolve({
         err: response ? 0 : 4,

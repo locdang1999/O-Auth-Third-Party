@@ -6,8 +6,9 @@ Doc:
 4. https://console.cloud.google.com/
 
 npm init -y
-npm i express passport cors nodemon dotenv jsonwebtoken
+npm i express passport cors nodemon dotenv jsonwebtoken uuid
 npm install passport-google-oauth20
+npm install passport-facebook
 
 npm install --save sequelize
 
