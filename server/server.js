@@ -3,6 +3,7 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDB = require("./src/config/connectDB");
 const authRouter = require("./src/routers/authRouter");
+const userRouter = require("./src/routers/userRouter");
 require('./passport');
 
 dotenv.config();
@@ -21,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 //   return res.send("Hello World!");
 // });
 app.use("/api/auth", authRouter);
+app.use("/api/user", userRouter);
 
 connectDB();
 
