@@ -1,0 +1,1 @@
+Nếu bị lỗi "req.session.regenerate is not a function" => chuyển version passport => npm i passport@0.5.0
